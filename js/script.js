@@ -6,5 +6,6 @@ $(".owl-carousel").owlCarousel({
 	smartSpeed: 2500000,
 	autoplay: true,
 	autoplaySpeed: 2000,
-	autoplayTimeout: 1500
+	autoplayTimeout: 3000,
+	autoplayHoverPause: true
 });
