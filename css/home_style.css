@@ -80,6 +80,7 @@ body {
   background: #2C2C2C;
   color: #ececec;
   white-space: nowrap;
+  cursor: default;
 }
 
 body::-webkit-scrollbar {
@@ -169,7 +170,7 @@ body a {
 }
 
 .top {
-  background: url("../img/bg.svg") center/cover no-repeat;
+  background: url("../img/bg.svg") center/cover no-repeat, url("../img/bg2.svg") center/cover no-repeat;
 }
 
 .top__cont {
@@ -224,6 +225,7 @@ body a {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   padding: 0.833333333% 0;
+  z-index: 2;
 }
 
 .menu__cont {
@@ -388,104 +390,133 @@ body a {
   gap: 4px;
 }
 
-/*.roadmap_column__row{
-	display: flex;
-	min-height: 90vh;
+.team__cont {
+  margin: 0 auto;
 }
-.roadmap__column{
-	border: 1px solid #000;
-}
-.roadmap__column_1{
-	flex: 1 1 15.7291667%;
-}
-	.column__block{
-		height: 50%;
-	}
-	.column__block_1{
-		border-top: 4px solid #E7D214;
-		border-right: 4px solid #E7D214;
-		border-radius: 0 80px 0 0;
-	}
-	.column__block_2{}
-.roadmap__column_2{
-	flex: 0 1 19.5833333%;
-}
-	.column__block_3{}
-	.column__block_4{
-		border-left: 4px solid #E7D214;
-		border-bottom: 4px solid #E7D214;
-		border-right: 4px solid #E7D214;
-		border-radius: 0 0 80px 80px;
-	}
-.roadmap__column_3{
-	flex: 0 1 19.5833333%;
-}
-	.column__block_5{
-		border-left: 4px solid #E7D214;
-		border-top: 4px solid #E7D214;
-		border-right: 4px solid #E7D214;
-		border-radius: 80px 80px 0 0;
-	}
-	.column__block_6{}
-.roadmap__column_4{
-	flex: 1 1 20.1041667%;
-}
-	.column__block_7{}
-	.column__block_8{
-		border-left: 4px solid #E7D214;
-		border-bottom: 4px solid #E7D214;
-		border-radius: 0 0 0 80px;
-	}*/
-/*.roadmap__column{}
-.roadmap__column_1{
-	flex: 1 1 15.7291667%;
-	border-top: 4px solid #E7D214;
-	border-right: 4px solid #E7D214;
-	border-radius: 0 80px 0 0;
-}
-.roadmap__column_2{
-	flex: 0 1 19.5833333%;
-	border-bottom: 4px solid #E7D214;
-	border-right: 4px solid #E7D214;
-	border-radius: 0 0 80px 80px;
-}
-.roadmap__column_3{
-	flex: 0 1 19.5833333%;
-	border-top: 4px solid #E7D214;
-	border-right: 4px solid #E7D214;
-	border-radius: 80px 80px 0 0;
-}
-.roadmap__column_4{
-	flex: 1 1 20.1041667%;
-	border-bottom: 4px solid #E7D214;
-	border-radius: 0 0 0 80px;
-}*/
-/*.test1{
-	margin: 50px;
-	width: 30%;
-	height: 100px;
 
-	border-radius: 0 50px 0 0;
-	border-top: 15px ridge #E7D214;
-	border-right: 15px groove #E7D214;
-	opacity: 0.6;
+.team__card {
+  padding: 32px 0;
 }
-.test2{
-	margin: 50px;
-	width: 30%;
-	height: 100px;
 
-	border: 4px solid #E7D214;
-}*/
+.team__card__cont {
+  width: 1440px;
+  margin: 0 auto;
+  /*height: 325px;*/
+}
+
+.team__card__row {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.team__card__row:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.card {
+  margin: 0 0 0 32px;
+  background: #0C6DA6;
+  border: 1px solid #181818;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:active {
+  /*cursor: pointer;*/
+}
+
+.card__cont {
+  position: relative;
+  width: 224px;
+  height: 336px;
+}
+
+.card__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 224px;
+}
+
+.card__body {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 16px;
+  display: inline-block;
+}
+
+.card__job_title {
+  background: #181818;
+  border-radius: 42px;
+  padding: 4px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.card__name {
+  margin: 8px 0 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__text {
+  margin: 8px 0 0 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.team__card_1 .card__img {
+  background: url("../img/avatar1.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_2 .card__img {
+  background: url("../img/avatar2.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_3 .card__img {
+  background: url("../img/avatar3.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_4 .card__img {
+  background: url("../img/avatar4.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_5 .card__img {
+  background: url("../img/avatar5.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_6 .card__img {
+  background: url("../img/avatar6.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_7 .card__img {
+  background: url("../img/avatar7.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_8 .card__img {
+  background: url("../img/avatar8.svg") 0 0/100% 100% no-repeat;
+}
+
+.team__card_9 .card__img {
+  background: url("../img/avatar9.svg") 0 0/100% 100% no-repeat;
+}
+
 .footer {
   padding: 16px 0 48px;
-  /*background: #121212;*/
 }
 
-/*.footer:hover{
-	transition: 0.12s;
-	background: #121212;
-}*/
 .footer__cont {
   max-width: 1184px;
   margin: 0 auto;

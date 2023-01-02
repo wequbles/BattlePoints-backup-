@@ -80,6 +80,7 @@ body {
   background: #2C2C2C;
   color: #ececec;
   white-space: nowrap;
+  cursor: default;
 }
 
 body::-webkit-scrollbar {
@@ -265,6 +266,7 @@ body a {
           backdrop-filter: blur(2px);
   background: none;
   padding: 0.833333333% 0;
+  z-index: 2;
 }
 
 .menu__cont {
