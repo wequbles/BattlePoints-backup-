@@ -300,6 +300,15 @@ button {
       -ms-flex: 0 1 51%;
           flex: 0 1 51%;
 }
+.menu__logo img {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu__logo img:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
 
 .menu_btn {
   -webkit-box-flex: 1;
