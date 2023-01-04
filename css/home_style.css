@@ -87,16 +87,14 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
-body a {
-  color: #ececec;
+button {
+  background: none;
 }
 
 /*Элементы*/
 .btn button {
   padding: 8px;
-  line-height: 24px;
   background: #0A9CEE;
-  color: #181818;
   cursor: pointer;
   border-radius: 6px;
   text-align: center;
@@ -106,28 +104,45 @@ body a {
   transition: 0.05s;
 }
 
+.btn a {
+  color: #181818;
+  line-height: 24px;
+}
+
 .btn button:hover {
   background: #0c6da6;
 }
 
 .btn button:active {
   background: #181818;
+}
+
+.btn a:active {
   color: #ececec;
 }
 
-.txt_btn button {
+.rectangle {
+  width: 16px;
+  height: 3px;
+  margin: 0 auto;
+  border-radius: 0px 0px 2px 2px;
+  margin-bottom: -3px;
+  background: transparent;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.txt_btn button:hover .rectangle {
+  width: 100%;
+  background: #D9D9D9;
+}
+
+.txt_btn a {
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
   color: #ececec;
-  background: none;
   padding: 0 4px;
-}
-
-.txt_btn:hover {
-  border-bottom: 3px solid #D9D9D9;
-  border-radius: 2px;
-  margin-bottom: -3px;
 }
 
 .title {
@@ -143,12 +158,11 @@ body a {
   line-height: 24px;
 }
 
-.f_btn button {
+.f_btn a {
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
   color: #ececec;
-  background: none;
 }
 
 /**/
@@ -210,7 +224,7 @@ body a {
   padding: 12px 14%;
 }
 
-.btn__start button a {
+.btn__start a {
   color: #181818;
 }
 
@@ -290,7 +304,7 @@ body a {
   gap: 8px;
 }
 
-.menu_auth__input button {
+.menu_auth__input a {
   font-weight: 400;
   font-size: 20px;
 }
@@ -420,12 +434,6 @@ body a {
   border: 1px solid #181818;
   border-radius: 16px;
   overflow: hidden;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.card:active {
-  /*cursor: pointer;*/
 }
 
 .card__cont {
